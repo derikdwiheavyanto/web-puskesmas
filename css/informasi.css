@@ -1,0 +1,203 @@
+.nav-title {
+    position: relative;
+    display: flex;
+    padding-left: 102px;
+    column-gap: 122px;
+    align-items: center;
+    justify-content: space-between;
+    height: 330px;
+    background-color: #47B14B;
+    color: white;
+    font-size: 64px;
+    z-index: -1;
+}
+
+.nav-title img {
+    position: relative;
+    right: 2px;
+    bottom: -80px;
+    z-index: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    z-index: 0;
+    min-height: 515px;
+}
+
+.content .img-background img {
+    position: absolute;
+    width: 100%;
+    height: 432px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.content>.desc {
+    display: flex;
+    flex-direction: column;
+    margin: 32px auto;
+    row-gap: 32px;
+    width: 89.99999%;
+}
+
+
+/* Pengumuman */
+/* card announcement */
+.card-announc {
+    display: flex;
+    column-gap: 32px;
+    background-color: white;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.img-announc img {
+    width: 300px;
+    height: 100%;
+}
+
+.card-content {
+    padding: 8px 42px 8px 8px;
+}
+
+.card-content>.card-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    color: black;
+}
+
+.card-content>.card-desc .title {
+    font-size: 32px;
+}
+
+.card-content>.card-desc .desc {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.60);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-date-view {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 54px;
+    color: rgba(0, 0, 0, 0.60);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+
+.pagination a .box {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #108A4A;
+    color: black;
+    box-sizing: border-box;
+
+}
+
+.pagination a:nth-child(1n+2) .box {
+    border-left: none;
+}
+
+.pagination .active {
+    background-color: #108A4A;
+}
+
+/* end Penngumman */
+
+/* Detail Pengumuman */
+.content-detail-announc {
+    display: block;
+    padding: 48px 64px;
+}
+
+.content-detail-announc .title{
+    font-size: 32px;
+}
+
+hr{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.date-view {
+    display: flex;
+    column-gap: 10px;
+    color: rgba(0, 0, 0, 0.60);
+    margin-bottom: 16px;
+}
+
+.img-detail-announc{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.img-detail-announc img{
+    min-width: 50%;
+    max-width: 80%;
+}
+
+.desc-detail-announc{
+    margin: 32px 24px;
+    text-align: justify;
+    font-size: 24px;
+}
+
+/* end Detail Pengumuman */
+
+/* Gallery Video */
+.line {
+    background-color: #47B14B;
+    width: 256px;
+    height: 2px;
+}
+
+.card-gallery {
+    display: flex;
+    margin: 0px 107px;
+    padding: 16px;
+    justify-content: space-between;
+
+}
+
+.card-gallery .card-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 520px;
+    text-align: justify;
+}
+
+.card-gallery .card-desc h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.card-gallery .card-desc p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-gallery .card-video iframe {
+    width: 500px;
+    height: 324px
+}
+/* end Gallery video */

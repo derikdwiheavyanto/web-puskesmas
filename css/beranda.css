@@ -1,0 +1,281 @@
+
+/* slideshow */
+
+.slider-container {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slider {
+    display: none;
+}
+
+.slider img {
+    width: 100%;
+    height: 95vh;
+}
+
+.prev,
+.next {
+    box-sizing: border-box;
+    width: 46px;
+    height: 46px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 11px 15px 11px 15px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0.4;
+    position: absolute;
+    top: 45%;
+    transition: opacity 0.6s ease-out;
+    user-select: none;
+}
+
+.prev img,
+.next img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* content */
+
+.container {
+    margin: 0px 16px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 32px 0px;
+    padding: 32px;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.title .img-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    background-color: #47B14B;
+    width: 256px;
+    height: 2px;
+}
+
+.title h4 {
+    color: #47B14B;
+}
+
+.intro {
+    position: relative;
+    padding: 32px 0px;
+    width: 100%;
+    display: flex;
+}
+
+.intro .img-background img {
+    position: absolute;
+    width: 100%;
+    height: 432px;
+    z-index: -1;
+    bottom: 0px;
+}
+
+.intro .desc {
+    flex: 1;
+    margin-top: 32px;
+    margin-left: 64px;
+    padding: 64px 16px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.intro .desc h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.intro .icon-pkm {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .icon-pkm img{
+    width: 90%;
+    max-width: 450px;
+}
+
+
+/* Gallery Video */
+.card-gallery {
+    display: flex;
+    margin: 32px 107px;
+    padding: 16px;
+    column-gap: 195px;
+    justify-content: space-between;
+
+}
+
+.card-gallery .card-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    /* width: 520px; */
+    text-align: justify;
+}
+
+.card-gallery .card-desc h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.card-gallery .card-desc p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-gallery .card-video iframe {
+    width: 500px;
+    height: 324px
+}
+
+.btn-gallery {
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 139px;
+    background-color: #108A4A;
+    margin: 32px 0px;
+    padding: 4px 24px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    border-radius: 8px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.btn-gallery:hover {
+    background-color: white;
+    border: 2px solid #47B14B;
+    color: #47B14B;
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+    .slider img{
+        height: 50vh;
+    }
+
+    .intro{
+        padding: 0px;
+        flex-direction: column-reverse;
+    }
+
+    .intro .desc{
+        padding: 0px;
+        margin: 0px 32px;
+        font-size: 12px;
+    }
+
+    .intro .desc h1{
+        font-size: 32px;
+    }
+
+    .title h2 {
+        font-size: 18px;
+    }
+
+    .title h4 {
+        font-size: 12px;
+    }
+
+    .intro .icon-pkm{
+        padding-top: 12px;
+    }
+
+    /* Gallery Video */
+    .card-gallery {
+        width: 100%;
+        flex-direction: column;        
+        row-gap: 16px;
+        margin: 0px 0px;
+        padding: 16px 0px;
+        
+    }
+
+    .card-gallery .card-video iframe{
+        width: 100%;
+        height: 234px;
+    }
+
+    .card-gallery .card-desc h1 {
+        font-size: 24px;
+    }
+
+    .card-gallery .card-desc p {
+        font-size: 12px;
+    }
+
+    .btn-gallery {
+        cursor: pointer;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        left: 0px;
+        margin: 8px 0px;
+        padding: 4px 24px;
+        font-size: 12px;
+      
+    }
+
+   
+    
+}
+
+@media only screen and (max-width: 1285px){
+    .card-gallery{
+        flex-direction: column-reverse;
+        row-gap: 16px;
+    }
+}

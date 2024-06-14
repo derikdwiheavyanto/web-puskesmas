@@ -1,0 +1,151 @@
+.nav-title {
+    position: relative;
+    display: flex;
+    padding-left: 102px;
+    column-gap: 122px;
+    align-items: center;
+    justify-content: space-between;
+    height: 330px;
+    background-color: #47B14B;
+    color: white;
+    font-size: 64px;
+    z-index: -1;
+}
+
+.nav-title img {
+    position: relative;
+    right: 2px;
+    bottom: -80px;
+    z-index: 0;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    background-color: white;
+    z-index: 0;
+    min-height: 515px;
+}
+
+.content .img-background img {
+    position: absolute;
+    width: 100%;
+    height: 432px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.content .desc {
+    margin: 32px auto;
+    width: 80%;
+}
+
+.content .desc img {
+    max-width: 1280px;
+}
+
+.nav-button {
+    display: flex;
+}
+
+.nav-button button {
+    cursor: pointer;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-left: 5px solid #47B14B;
+    border-top: 5px solid #47B14B;
+    border-right: 5px solid #47B14B;
+    border-bottom: none;
+    background-color: white;
+}
+
+.nav-button button.active {
+    background-color: #47B14B;
+    color: white;
+}
+
+.form-container {
+    padding: 2em;
+    border: 5px solid #47B14B;
+}
+
+.form-container .title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #108A4A;
+    margin-bottom: 16px;
+}
+
+.form > div {
+    display: flex;
+    column-gap: 48px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-input{
+    display: flex;
+    column-gap: 48px;
+    margin: 16px 0px;
+}
+
+.form-input label{
+    min-width: 200px;
+    max-width: 210px;
+}
+
+.form-input input, .form-input select{
+    width: 250px;
+    box-sizing: border-box;
+    padding: 4px 16px;
+    border-radius: 16px;
+    border: 1px solid;
+    font-size: 24px;
+}
+
+#pasien-baru{
+    display: none;
+}
+
+#note{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 170px;
+    font-size: 14px !important;
+    color: #108A4A;
+}
+
+.btn-submit button{
+    border: 1px solid #108A4A;
+    padding: 0px 32px;
+    font-size: 24px;
+    color: white;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.btn-submit button:hover{
+    background-color: white;
+    color: #108A4A;
+}
+
+.btn-submit button span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.btn-submit button .icon{
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/icon/search-icon.svg);
+}
+
+.btn-submit button:hover .icon{
+    background-image: url(../assets/icon/search-primary-icon.svg);
+}
+
