@@ -124,7 +124,7 @@
                             </div>
                         </form>
                         <!--  -->
-                        <form action="">
+                        <form action="javascript:;" onsubmit="daftarPasienlama(event)">
                             <div class="pendaftaran" id="pendaftaran">
                                 <div class="title">
                                     <span>Pendaftaran</span>
@@ -143,8 +143,9 @@
                                             <label for="poliklinik">Poliklinik</label>
                                             <select name="" id="poliklinik" >
                                                 <option value="" disabled selected hidden>Pilih Poliklinik</option>
-                                                <option value="L">Laki laki</option>
-                                                <option value="P">Perempuan</option>
+                                                <option value="poli_gigi">Poli Gigi</option>
+                                                <option value="poli_kia">Poli Kesehatan Ibu dan Anak</option>
+                                                <option value="poli_umum">Poli Umum</option>
                                             </select>
                                         </div>
                                     </div>
@@ -163,7 +164,7 @@
                         
                     </div>   
                 </div>
-                <form id="pasien-baru" action="">
+                <form id="pasien-baru" action="javascript:;" onsubmit="daftarPasienBaru(event)">
                     <div class="form-container">
                         <!--  -->
                         <div class="title">
@@ -188,8 +189,8 @@
                             </div>
                             <div >
                                 <div class="form-input">
-                                    <label for="nama">No KTP / NIK</label>
-                                    <input id="nama" type="text">
+                                    <label for="nik_pasien_baru" >No KTP / NIK</label>
+                                    <input id="nik_pasien_baru" type="text" required>
                                 </div>
                                 <div class="form-input">
                                     <label for="status">Status</label>
@@ -351,8 +352,10 @@
     </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module">
-        import { changeButton, cari } from '../../js/pendaftaran.js';
+        import { changeButton, cari , daftarPasienBaru, daftarPasienlama } from '../../js/pendaftaran.js';
         window.changeButton = changeButton;
         window.cari = cari;
+        window.daftarPasienBaru = daftarPasienBaru;
+        window.daftarPasienlama = daftarPasienlama;
     </script>
 </html>

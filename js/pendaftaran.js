@@ -58,6 +58,40 @@ export const cari = (e)=>{
     }
 }
 
+const getRandomInteger = (min, max) => {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+  
+    return Math.floor(Math.random() * (max - min)) + min
+  }
+
 export const daftarPasienBaru = (e)=>{
+    let nik = document.getElementById('nik_pasien_baru')
+    let no_rekam_medis = getRandomInteger(0,99999999)
+
     
+    user.push({no_rekam_medis: no_rekam_medis,nik:Number(nik.value)})
+
+    Swal.fire({
+        icon: "success",
+        title: `No Rekam Medis : ${no_rekam_medis}`,
+        text: "Mohon untuk menunggu respon dari petugas maksimal 1 x 24 jam. Silahkan daftar menggunakan no rekam medis yang diberikan di menu pasien lama jika ingin mendaftar lagi",
+        confirmButtonColor: '#17610B',
+      })
+
+        
+
+
 }
+
+export const daftarPasienlama = (e) => {
+    e.preventDefault()
+    Swal.fire({
+        icon: "success",
+        title: `Sukses Mendaftar`,
+        text: "Mohon untuk menunggu respon dari petugas maksimal 1 x 24 jam.",
+        confirmButtonColor: '#17610B',
+      })
+}
+
+
