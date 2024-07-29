@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../../css/pendaftaran.css">
         <script src="https://kit.fontawesome.com/1d87bd3f87.js" crossorigin="anonymous"></script>
         <script
-            src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+            src=""></script>
 
     </head>
     <body>
@@ -98,32 +98,71 @@
                     <button class="button active" type="button" onclick="changeButton(0)">Pasien Lama</button>
                     <button  class="button" type="button" onclick="changeButton(1)">Pasien Baru</button>
                 </div>
-                <form id="pasien-lama" action="">
+                <div id="pasien-lama">
                     <div class="form-container">
                         <!--  -->
-                        <div class="title">
-                            <span>Data Pasien Lama</span>
-                            <hr>
-                        </div>
-                        <div class="form">
-                            <div >
+                        <form onsubmit="cari(event)">
+                            <div class="title">
+                                <span>Data Pasien Lama</span>
+                                <hr>
+                            </div>
+                            <div class="form">
+                                <div >
+                                    <div class="form-input">
+                                        <label for="no_rm_pasien_lama">No Rekam Medis</label>
+                                        <input id="no_rm_pasien_lama" type="text" required>
+                                    </div>
+                                </div>
                                 <div class="form-input">
-                                    <label for="no_rm">No Rekam Medis</label>
-                                    <input id="no_rm" type="text">
+                                    <label for="nik_pasien_lama">No KTP / NIK</label>
+                                    <input id="nik_pasien_lama" type="text" required>
                                 </div>
                             </div>
-                            <div >
-                                <div class="form-input">
-                                    <label for="tempat_lahir">Tanggal Lahir</label>
-                                    <input id="tempat_lahir" type="date">
+                            
+                            <div class="btn-submit">
+                                <button class="bg-primary" type="submit"><span><div class="icon"></div>Cari</span></button>
+                            </div>
+                        </form>
+                        <!--  -->
+                        <form action="">
+                            <div class="pendaftaran" id="pendaftaran">
+                                <div class="title">
+                                    <span>Pendaftaran</span>
+                                    <hr>
+                                </div>
+                                <div class="form">
+                                    <div >
+                                        <div class="form-input">
+                                            <label for="pembayaran">Pembayaran</label>
+                                            <select name="" id="pembayaran">
+                                                <option value="L">Umum</option>
+                                                <option value="P">BPJS</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-input">
+                                            <label for="poliklinik">Poliklinik</label>
+                                            <select name="" id="poliklinik" >
+                                                <option value="" disabled selected hidden>Pilih Poliklinik</option>
+                                                <option value="L">Laki laki</option>
+                                                <option value="P">Perempuan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-input">
+                                            <label for="tanggal_periksa">Tanggal Periksa</label>
+                                            <input id="tanggal_periksa" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-submit">
+                                    <button class="bg-primary" type="submit">Kirim</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="btn-submit">
-                            <button class="bg-primary" type="submit"><span><div class="icon"></div>Cari</span></button>
-                        </div>
-                    </div>
-                </form>
+                        </form>
+                        
+                    </div>   
+                </div>
                 <form id="pasien-baru" action="">
                     <div class="form-container">
                         <!--  -->
@@ -135,7 +174,7 @@
                             <div >
                                 <div class="form-input">
                                     <label for="nama">Nama Lengkap</label>
-                                    <input id="nama" type="text">
+                                    <input id="nama" type="text" r>
                                 </div>
                                 <div class="form-input">
                                     <label for="pendidikan">Pendidikan</label>
@@ -310,8 +349,10 @@
                 Tulungagung</div>
         </footer>
     </body>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjemNgTwBe0cGkoMQGcyqHhihJcRfGnmY&loading=async&callback=initMap&v=weekly"></script>
-    <script src="../../js/beranda.js">initMap()</script>
-    <script src="../../js/pendaftaran.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module">
+        import { changeButton, cari } from '../../js/pendaftaran.js';
+        window.changeButton = changeButton;
+        window.cari = cari;
+    </script>
 </html>

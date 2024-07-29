@@ -125,6 +125,8 @@
     color: white;
     border-radius: 8px;
     margin-top: 8px;
+    margin-bottom: 8px;
+
 }
 
 .btn-submit button:hover{
@@ -147,5 +149,13 @@
 
 .btn-submit button:hover .icon{
     background-image: url(../assets/icon/search-primary-icon.svg);
+}
+
+.pendaftaran{
+    display: none;
+}
+
+.pendaftaran.active{
+    display: block;
 }
 

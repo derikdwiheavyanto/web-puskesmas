@@ -1,69 +1,71 @@
 
 /* slideshow */
-
 .slider-container {
-    box-sizing: border-box;
     position: relative;
+    max-width: 100%;
+    height: 95vh;
+    overflow: hidden;
 }
 
 .slider {
-    display: none;
+    position: absolute;
+    width: 100%;
+    height: 95vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .slider img {
     width: 100%;
     height: 95vh;
+    object-fit: cover;
 }
 
 .prev,
 .next {
-    box-sizing: border-box;
-    width: 46px;
-    height: 46px;
-    margin-left: 16px;
-    margin-right: 16px;
-    padding: 11px 15px 11px 15px;
-    border-radius: 100%;
-    background-color: white;
-    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
-    top: 45%;
-    transition: opacity 0.6s ease-out;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
     user-select: none;
-}
-
-.prev img,
-.next img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: auto;
+    z-index: 10;
 }
 
 .next {
     right: 0;
+    border-radius: 3px 0 0 3px;
+   
 }
 
 .prev:hover,
 .next:hover {
-    background-color: white;
-    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-@keyframes fade {
-    from {
-        opacity: 0.4
-    }
-
-    to {
-        opacity: 1
-    }
+.inactive-left {
+    transform: translateX(-100%);
 }
+
+.inactive-right {
+    transform: translateX(100%);
+}
+
 
 /* content */
 
@@ -164,6 +166,8 @@
 .card-gallery .card-desc h1 {
     font-size: 32px;
     font-weight: 500;
+    line-height: 40px;
+    text-align: left;
 }
 
 .card-gallery .card-desc p {
@@ -191,6 +195,7 @@
     font-size: 24px;
     border-radius: 8px;
     box-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
 }
 
 .btn-gallery:hover {
@@ -203,8 +208,40 @@
 
 @media only screen and (max-width: 768px){
 
-    .slider img{
+    .slider-container {
+        position: relative;
+        max-width: 100%;
         height: 50vh;
+        overflow: hidden;
+    }
+    
+    .slider {
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+    
+    .slider img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .inactive-left {
+        transform: translateX(-100%);
+    }
+    
+    .inactive-right {
+        transform: translateX(100%);
     }
 
     .intro{
